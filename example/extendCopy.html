@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <pre id="content"></pre>
+    <script src="../extendCopy.js"></script>
+    <script>
+        var obj = {
+            name: 'Azu',
+            sex: 'M',
+            age: '21',
+            friends: ['Athena','Frunk','Babel'],
+            parents: {
+                fater: {
+                    name: 'Azu-father',
+                    sex: 'M',
+                    child: ['Azu','Jen']
+                },
+                mother: {
+                    name: 'Azu-mother',
+                    sex: 'F',
+                    child: ['Azu','Jen']
+                }
+            }
+        }
+        document.getElementById('content').textContent = JSON.stringify(extendCopy1(obj));
+        // document.getElementById('content').textContent = JSON.stringify(extendCopy2(obj));
+    </script>
+</body>
+</html>
